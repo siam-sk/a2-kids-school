@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 /* Shared Styles */
+/* -------------------------------- */
 .orange {
     color: orange;
 }
@@ -13,6 +14,18 @@
 .purple {
     color: #5D58EF;
 }
+
+.primary-btn {
+    width: 197px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    color: white;    
+    border-radius: 12px;
+    border: none;
+}
+/* -------------------------------- */
 
 body {
     font-family: "Quicksand", serif;
@@ -46,23 +59,41 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-.nav-big .btn {
-    width: 192px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px;
-    color: white;
+.nav-big .btn-1 {
     background-color: orange;
-    border-radius: 8px;
-    border: none;
 }
 .nav-small {
     display: none;
 }
 
+.hero-area {
+    display: flex;
+    align-items: center;
+    margin: 20px 140px;
+}
+.hero-area h1 {
+    font-size: 56px;
+    line-height: 1.1;
+}
+.hero-area p {
+    font-size: 20px;
+}
+.hero-area .btn-2 {
+    background-color: black;
+}
+
 
 @media screen and (max-width: 576px) {
+     /* Shared Styles */
+    /* -------------------------------- */
+    .btn-small {
+        height: 42px;
+        width: 131px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+    /* -------------------------------- */
+
     .nav-big {
         display: none;
     }
@@ -71,11 +102,29 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 12px 16px;
+        border-bottom: 1px solid orange;
     }
     .nav-small img {
         height: 42px
     }
     .nav-small i {
         font-size: 30px;
+    }
+
+    .hero-area {
+        flex-direction: column-reverse;
+        margin-left: 16px;
+        margin-right: 17px;
+        text-align: center;
+    }
+    .hero-area h1 {
+        font-size: 32px;
+    }
+    .hero-area p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .hero-area img {
+        width: 100%;
     }
 }
