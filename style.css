@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Shared Styles */
 /* -------------------------------- */
@@ -12,6 +13,7 @@ button:hover {
     cursor: pointer;
 }
 
+/* Colors */
 .orange {
     color: orange;
 }
@@ -24,7 +26,23 @@ button:hover {
 .purple {
     color: #5D58EF;
 }
+.grey {
+    color: #808080;
+}
+.white {
+    color: white;
+}
+.cyan-bg {
+    background-color: #3CD8E8;
+}
+.green-bg {
+    background-color: #95B226
+}
+.purple-bg {
+    background-color: #5D58F0;
+}
 
+/* Buttons */
 .primary-btn {
     width: 197px;
     height: 50px;
@@ -34,6 +52,9 @@ button:hover {
     color: white;    
     border-radius: 12px;
     border: none;
+}
+.btn-2 {
+    background-color: black;
 }
 /* -------------------------------- */
 
@@ -83,25 +104,30 @@ button:hover {
 .hero-area p {
     font-size: 20px;
 }
-.hero-area .btn-2 {
-    background-color: black;
-}
 
-.curriculum {
+.curriculum-bg {
     background-image: url(assets/bg.png);
-    margin: 60px 140px;
+    background-repeat: no-repeat;
+    background-position: 60px 50px;
+}
+.curriculum {
+    margin: 0 140px;
+    padding: 60px  0;
     text-align: center;
 }
-.curriculum h1 {
+.curriculum h1 { 
     font-size: 46px;
 }
 .curriculum .cards {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 28px;
     padding: 80px 0;
 }
-.curriculum .cards strong {
+.curriculum .cards a {
     font-weight: bold;
+    text-decoration: none;
 }
 .curriculum .cards h3 {
     font-size: 24px;
@@ -114,7 +140,7 @@ button:hover {
     border: 1px solid #def5ff;
     padding: 40px;
     width: 368px;
-    height: 420px;
+    /* height: 420px; */
     background: linear-gradient(180deg, #def5ff 0%, #ffffff 35%); 
 }
 .curriculum .cards .card-2 {
@@ -122,7 +148,7 @@ button:hover {
     border: 1px solid #FFF4DC;
     padding: 40px;
     width: 368px;
-    height: 425px;
+    /* height: 425px; */
     background: linear-gradient(180deg, #FFF4DC 0%, #ffffff 35%); 
 }
 .curriculum .cards .card-3 {
@@ -130,19 +156,105 @@ button:hover {
     border: 1px solid #F2E8FF;
     padding: 40px;
     width: 368px;
-    height: 420px;
+    /* height: 420px; */
     background: linear-gradient(180deg, #F2E8FF 0%, #ffffff 35%); 
 }
 .curriculum .fa-solid {
     background-color: orange;
     border-radius: 50%;
     color: white;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 25px;
+    padding: 15px;
 }
+
+.stories-bg {
+    background-image: url('assets/bg.png'), linear-gradient(to bottom, rgba(255,255,255,1), rgb(254, 236, 205)); 
+}
+.stories {
+    margin: 0 140px;
+    padding: 60px 0;
+}
+.stories h1 {
+    text-align: center;
+    font-size: 46px;
+}
+.card-container {
+    padding: 80px 0;
+    display: grid;
+    grid-template-areas:
+    "card-1 card-2 card-3"
+    "card-1 card-4 card-5"
+    ;
+    gap: 19px;
+    justify-content: center;
+}
+.card-container img {
+    border-radius: 16px 16px 0 0;
+}
+.card-container .card-1 {
+    grid-area: card-1;
+    border-radius: 16px;
+    height: 631px;
+    background-color: white;
+}
+.card-container .card-2 {
+    grid-area: card-2;
+    border-radius: 16px;
+    height: 302px;
+    background-color: white;
+}
+.card-container .card-3 {
+    grid-area: card-3;
+    border-radius: 16px;
+    height: 302px;
+    background-color: white;
+}
+.card-container .card-4 {
+    grid-area: card-4;
+    border-radius: 16px;
+    height: 302px;
+    background-color: white;
+}
+.card-container .card-5 {
+    grid-area: card-5;
+    border-radius: 16px;
+    height: 302px;
+    background-color: white;
+}
+.card-container .date {
+    height: 48px;
+    width: 175px;
+    font-family: "Raleway", serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container .card-texts {
+    padding: 0 34px;
+    font-size: 15px;
+    position: relative;
+    top: -45px;
+}
+.card-container .card-texts #card-exeption-h3 {
+    font-size: 24px;
+}
+.card-container .card-texts #card-exeption-p {
+    font-size: 16px;
+    margin-top: 48px;
+    color: #666666;
+}
+.stories .btn-2-container {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Styles for Mobile */
 /* -------------------------------- */
-
 @media screen and (max-width: 576px) {
      /* Shared Styles */
     /* -------------------------------- */
@@ -173,8 +285,7 @@ button:hover {
 
     .hero-area {
         flex-direction: column-reverse;
-        margin-left: 16px;
-        margin-right: 17px;
+        margin: 0 16px;
         text-align: center;
     }
     .hero-area h1 {
@@ -189,10 +300,11 @@ button:hover {
     }
 
     .curriculum {
-        margin-left: 16px;
-        margin-right: 17px;
+        margin: 0 16px;
+        padding: 40px 0;
     }
     .curriculum .cards {
+        padding: 20px 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -200,18 +312,83 @@ button:hover {
     }
     
     .curriculum .cards .card-1 {
-        width: 90%;
-        height: 420px;
+        width: 280px;
     }
     .curriculum .cards .card-2 {
-        width: 90%;
-        height: 424px;
+        width: 280px;
     }
     .curriculum .cards .card-3 {
-        width: 90%;
-        height: 420px;
+        width: 280px;
     }
     .curriculum .fa-solid {
+        display: none;
+    }
+
+    .stories {
+        margin: 0 16px;
+        padding: 40px 0;
+    }
+    .stories h1 {
+        font-size: 24px;
+    }
+    .card-container {
+        padding: 20px 0;
+        grid-template-areas:
+        "card-2 card-3"
+        "card-4 card-5"
+        ;
+        gap: 11px;
+        justify-content: center;
+    }
+    .card-container img {
+        width: 100%;
+    }
+    .card-container .card-1 {
+        display: none;
+    }
+    .card-container .card-2 {
+        height: 180px;
+        width: 173px;     
+    }
+    .card-container .card-3 {
+        height: 180px;
+        width: 173px;      
+    }
+    .card-container .card-4 {
+        height: 180px;
+        width: 173px;   
+    }
+    .card-container .card-5 {
+        height: 180px;
+        width: 173px;
+    }
+    .card-container .date {
+        height: 22px;
+        width: 103px;
+        font-size: 9px;
+        font-weight: 500;
+        border-radius: 40px;
+    }
+    .card-container .card-texts {
+        padding: 0 20px;
+        font-size: 9px;
+        top: -25px;
+    }
+}
+
+/* Styles for Mobile */
+/* -------------------------------- */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .card-container {
+        /* padding: 20px 0; */
+        grid-template-areas:
+        "card-2 card-3 card-4"
+        "card-5 0      0     "
+        ;
+        /* gap: 11px;
+        justify-content: center; */
+    }
+    .card-container .card-1 {
         display: none;
     }
 }
