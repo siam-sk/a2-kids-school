@@ -140,7 +140,7 @@ button:hover {
     border: 1px solid #def5ff;
     padding: 40px;
     width: 368px;
-    /* height: 420px; */
+    height: 476px;
     background: linear-gradient(180deg, #def5ff 0%, #ffffff 35%); 
 }
 .curriculum .cards .card-2 {
@@ -148,7 +148,7 @@ button:hover {
     border: 1px solid #FFF4DC;
     padding: 40px;
     width: 368px;
-    /* height: 425px; */
+    height: 481px;
     background: linear-gradient(180deg, #FFF4DC 0%, #ffffff 35%); 
 }
 .curriculum .cards .card-3 {
@@ -156,7 +156,7 @@ button:hover {
     border: 1px solid #F2E8FF;
     padding: 40px;
     width: 368px;
-    /* height: 420px; */
+    height: 476px;
     background: linear-gradient(180deg, #F2E8FF 0%, #ffffff 35%); 
 }
 .curriculum .fa-solid {
@@ -252,6 +252,44 @@ button:hover {
     justify-content: center;
 }
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #01ACFD;
+    padding: 123px 228px 174px 140px;
+}
+.footer a {
+    text-decoration: none;
+}
+.footer .column-1 img {
+    height: 82px;
+}
+.footer .column-1 {
+    width: 400px;
+}
+.footer .column-1 .footer-title {
+    display: flex;
+    align-items: center;
+}
+.footer .column-1 h1 {
+    font-size: 40px;
+    line-height: 1;
+    position: relative;
+    top: 5px
+}
+.footer .column-1 p {
+    font-size: 20px;
+}
+.footer .column-2 h3 {
+    font-size: 24px;
+}
+.footer .column-2 p {
+    font-size: 20px;
+}
+.footer .column-2 h2 {
+    font-size: 26px;
+}
+
 
 /* Styles for Mobile */
 /* -------------------------------- */
@@ -310,13 +348,8 @@ button:hover {
         align-items: center;
         gap: 10px;
     }
-    
-    .curriculum .cards .card-1 {
-        width: 280px;
-    }
-    .curriculum .cards .card-2 {
-        width: 280px;
-    }
+    .curriculum .cards .card-1,
+    .curriculum .cards .card-2,
     .curriculum .cards .card-3 {
         width: 280px;
     }
@@ -346,18 +379,9 @@ button:hover {
     .card-container .card-1 {
         display: none;
     }
-    .card-container .card-2 {
-        height: 180px;
-        width: 173px;     
-    }
-    .card-container .card-3 {
-        height: 180px;
-        width: 173px;      
-    }
-    .card-container .card-4 {
-        height: 180px;
-        width: 173px;   
-    }
+    .card-container .card-2,
+    .card-container .card-3,
+    .card-container .card-4,
     .card-container .card-5 {
         height: 180px;
         width: 173px;
@@ -374,21 +398,51 @@ button:hover {
         font-size: 9px;
         top: -25px;
     }
+
+    .footer{
+        flex-direction: column;
+        padding: 60px 16px;
+    }
+    .footer .column-1,
+    .footer .column-2,
+    .footer .column-3 {
+        width: 320px;
+    }
+    .footer .column-1 img {
+        height: 70px;
+    }
+    .footer .column-1 h1 {
+        font-size: 36px;
+        line-height: 1;
+    }
+    .footer .column-1 p {
+        font-size: 16px;
+    }
+    .footer .column-2 h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .footer .column-2 p {
+        font-size: 16px;
+    }
+    .footer .column-2 h2 {
+        font-size: 22px;
+    }
 }
 
-/* Styles for Mobile */
+/* Styles for Medium */
 /* -------------------------------- */
-@media screen and (min-width: 576px) and (max-width: 992px) {
-    .card-container {
+/* @media screen and (min-width: 576px) and (max-width: 992px) {
+    /* .card-container {
         /* padding: 20px 0; */
-        grid-template-areas:
+        /* grid-template-areas:
         "card-2 card-3 card-4"
         "card-5 0      0     "
-        ;
+        ; */
         /* gap: 11px;
         justify-content: center; */
-    }
-    .card-container .card-1 {
+    /* } */
+    /* .card-container .card-1 {
         display: none;
-    }
-}
+    } */
+/* } */ 
